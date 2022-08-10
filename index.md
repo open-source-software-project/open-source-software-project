@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Open Source Software project
 
 You can use the [editor on GitHub](https://github.com/open-source-software-project/open-source-software-project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
