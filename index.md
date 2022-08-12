@@ -9,6 +9,6 @@
 [Team](team.md)
 
 <img src="/images/logo.png" alt="Coleridge Initiative" width="200"/>
-![Github](/images/Github_logo.png)
-![Gitee](/images/Gitee_logo.png)
-![Scholia](/images/Scholia_logo.png)
+<img src="/images/Github_logo.png" alt="Github" width="200"/>
+<img src="/images/Gitee_logo.png" alt="Gitee" width="200"/>
+<img src="/images/Scholia_logo.png" alt="Scholia" width="200"/>
