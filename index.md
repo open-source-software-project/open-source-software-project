@@ -1,6 +1,6 @@
 ## Open Source Software project
 
-Go to [about page](about.md)
+Go to [about page](about.html)
 
 You can use the [editor on GitHub](https://github.com/open-source-software-project/open-source-software-project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
