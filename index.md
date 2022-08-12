@@ -1,5 +1,3 @@
-## Open Source Software project
-
 [Overview](about.md)
 
 ### Markdown
