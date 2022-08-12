@@ -1,8 +1,6 @@
 ---
-title: Title
+title: Project overview
 ---
-
-# Project overview
 
 Open Source Software (OSS) is developed, maintained, and extended both within and
 outside of the private sector, through the contribution of independent developers as well as people
