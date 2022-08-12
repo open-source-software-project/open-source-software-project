@@ -2,4 +2,8 @@
 title: Team
 ---
 
-Text
+Gizem Korkmaz 
+
+Jason Zhang
+
+Ekaterina Levitskaya
