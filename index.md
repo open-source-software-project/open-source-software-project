@@ -5,10 +5,7 @@
 # [Team](team.md) 
 
 <br />
-<br />
-<br />
-<br />
-<br />
+
 
 # Updates 
 - Started the [spreadsheet](https://docs.google.com/spreadsheets/d/19ZBcg8-qJsa9r1BRGXxtcOKfaXgZ24aSDY_HxdfikJ0/edit) with the documentation of the code hosting platforms
