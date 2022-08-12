@@ -8,7 +8,7 @@
 
 [Team](team.md)
 
-![Coleridge Initiative](/images/logo.png)
+![Coleridge Initiative](/images/logo.png =100x20)
 ![Github](/images/Github_logo.png)
 ![Gitee](/images/Gitee_logo.png)
 ![Scholia](/images/Scholia_logo.png)
