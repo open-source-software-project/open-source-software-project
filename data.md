@@ -14,7 +14,7 @@ Data on open source Github projects, including repository and user metadata
 **2. Gitee data** <br />
 Data on open source Gitee projects, including repository and user metadata
 
-**3. Code.gov**
+**3. Code.gov** <br />
 Data on federal government's open source software
 
 **3. Wikidata** <br />
