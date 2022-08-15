@@ -1,5 +1,5 @@
 # [Overview](about.md)
-# [Literature](literature.md)
+# [Related work](literature.md)
 # [Data](data.md)
 # [Code](code.md)
 # [Team](team.md) 
