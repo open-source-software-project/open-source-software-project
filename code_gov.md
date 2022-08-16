@@ -22,15 +22,15 @@ TABLE OF CONTENTS
 
 DATASET TITLE
 -------------
-* Dataset title: Please put a descriptive title for the dataset.
+* Dataset title: Data from the Code.gov website
 
 
 AUTHORS AND AFFILIATIONS
 ------------------------
 * Dataset producer(s)/creator(s): 
 	- Name: 
-	- Organization/institution:
-	- Email: 
+	- Organization/institution: U.S. General Services Administration
+	- Email: code@gsa.gov
 * Primary contact: 
 	- Name: 
 	- Organization/institution:
@@ -84,29 +84,20 @@ SUMMARY/ABSTRACT
 KEYWORDS
 --------
 * Keywords: Please make a keyword list; separate keywords using semi-colon (;)
-
+federal government; open source software
 
 FILE ORGANIZATION
 -----------------
-* File naming convention:
-	- General principles: Consistent! Consistent!! Consistent!!!
-	- Recommended file naming format: file_name_YYYY-MM-DD_VX.X
-		- file_name: informative & self_explanatory 
-		- YYYY-MM-DD: ISO 8601 date format
-		- VX.X: 2-digit versioning number. The first digit increases if major changes (policies, roles, etc.) are made; The second digit increases if minor revisions (grammar, clarify, etc.) are made.
 * File structure:
 	- Directories/folders
-		- Directory/folder name: 
+		- Directory/folder name: Code_gov
 		- Files:
-			- File name:
-			- File type: dataset (image, audio, video, etc.), documentation, code.
-			- File location: 
-			- Relationship among files: original vs. processed, input vs. output, etc.
-
+			- File name: agency_name.json
+			- File type: dataset
 
 BACKGROUND INTRODUCTION
 -----------------------
-* What is your interest/motivation/objective(s):
+* What is your interest/motivation/objective(s): Document open source software produced by the federal government.
 * Provide the project history: 
 * How does this project contribute overall? 
 
@@ -115,30 +106,98 @@ DATASET DESCRIPTION
 -------------------
 * Data attribute: Describe if the dataset is experimental/simulation/observational, quantitative/qualitative, etc. For example, simulation of Hurricane Katrina, genomics sequence of a new string of bacteria.
 	- If collected dataset, please provide the following info:
-		- Collection date and time: 
-		- Collection geographic location: 
-		- Collection details: 
+		- Collection date and time: 2022-06
+		- Collection details: Downloaded the JSON files from the code.gov website.
 * Data sources: Please provide provenance information
 	1). Internal data source: Please provide relationships with other (data) files in the project, include name and location
+	- Spreadsheet with the code hosting platforms
 	2). External data source: If the original data is obtained from other (pre-existing) sources, such as other publication/repo/website/database, etc, please include name, location, query and the time while doing the query, url, citation/bib record, AND the licenses/restrictions for re-use.
 
 
 DATA DICTIONARIES
 -----------------
-For each column/variable/parameter header: 
-* Header name: 
-* Meaning/definition: explain if the name is an abbreviation.
-* Unit: If possible, indicate the reference/standard levels
+The provided columns/variables can vary by agency.
+
+Standard list of columns/variables:
+* Name: `agency`
+* Meaning/definition: The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.
 * Pattern:
-	- Conventions/standards that follow: For spatial information, indicate which coordinates; For temporal information: indicate time zone and standards (e.g., ISO 8601)
-	- Value domain: numeric, text, boolean, etc.
-	- Value distribution/range
+	- Conventions/standards that follow: The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.
+	- Value domain: text
+	
+* Name: `version`
+* Meaning/definition: The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org
+* Pattern:
+	- Conventions/standards that follow: e.g. 2.0.0
+	- Value domain: text
+	
+* Name: `measurementType`
+* Meaning/definition: An object containing description of the open source measurement method.
+* Specified values: 
+	- value: **cost**
+	- definition: Cost of software development
+	
+	- value: **systems*
+	- definition: System certification and accreditation boundaries
+	
+	- value: **projects**
+	- definition: A complete software solution / project
+	
+	- value: **modules**
+	- definition: A self-contained module from a software solution
+	
+	- value: **linesOfCode**
+	- definition: Source lines of code
+	
+	- value: **other**
+	- definition: Another measurement method not referenced above
+
+* Name: `releases`
+* Meaning/definition: List of objects containing each versioned source code release made available.
+* Field names for each object:
+	- `name` - The name of the release.
+	- `version` - The version for this release. For example, '1.0.0'.
+	- `organization` - The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'.
+	- `description` - A one or two sentence description of the release.
+	- `permissions` - An object containing description of the usage/restrictions regarding the release.
+		- `licenses`
+			- `URL` - The URL of the release license, if available. If not, null should be used.
+			- `name` - An abbreviation for the name of the license. For example, 'CC0' or 'MIT'.
+			- `usageType` - A list of enumerated values which describes the usage permissions for the release
+				 - **openSource** - Open source
+				 - **governmentWideReuse** - Government-wide reuse
+				 - **exemptByLaw** - The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information
+				 - **exemptByNationalSecurity** - The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy
+				 - **exemptByAgencySystem** - The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel
+				 - **exemptByAgencyMission** - The sharing of the source code would create an identifiable risk to agency mission, programs, or operations
+				 - **exemptByCIO** - The CIO believes it is in the national interest to exempt sharing the source code
+				 - **exemptByPolicyDate** - The release was created prior to the M-16-21 policy (August 8, 2016)"
+	- `tags` - An array of keywords that will be helpful in discovering and searching for the release.
+	- `contact` - Point of contact information for the release.
+		 - **email**
+		 - **name**
+		 - **URL**
+		 - **phone**
+	- `status` - The development status of the release.  
+		- **Ideation**
+        	- **Development**
+       		- **Alpha**
+        	- **Beta**
+       		- **Release Candidate**
+        	- **Production**
+         	- **Archival**
+	- `vcs` - A lowercase string with the name of the version control system that is being used for the release. For example, 'git'.
+	- `repositoryURL` - The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."	
+	- `languages` - An array of strings with the names of the programming languages in use on the release.
+	- `laborHours` - An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors.
+	- `date` - A date object describing the release.
+	
 * Special/specified value/code/symbol: 
 	- definition: eg, "N/A" indicates No/missing value.
 	- explanation: eg, "999" indicates No/missing value.
 * Terminology/dialect/jargon definition/explanation 
 * Accuracy: resolution/interval
-
+	
 
 METHODOLOGY DESCRIPTION
 -----------------------
