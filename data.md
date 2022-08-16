@@ -8,14 +8,14 @@ title: Data
 
 # Data sources
 
-**1. [Github data](github.md)** <br />
+**1. Github data - [documentation](github.md)** <br />
 Data on open source Github projects, including repository and user metadata
 
-**2. Gitee data** <br />
+**2. Gitee data - [documentation](gitee.md)** <br />
 Data on open source Gitee projects, including repository and user metadata
 
-**3. Code.gov** <br />
+**3. Code.gov - [documentation](code_gov.md)** <br />
 Data on federal government's open source software
 
-**3. Wikidata** <br />
+**3. Wikidata - [documentation](wikidata.md)** <br />
 Data on individuals, including full name and gender
