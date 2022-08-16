@@ -8,7 +8,7 @@ title: Data
 
 # Data sources
 
-**1. Github data** <br />
+**1. [Github data](data.md)** <br />
 Data on open source Github projects, including repository and user metadata
 
 **2. Gitee data** <br />
