@@ -137,7 +137,7 @@ Standard list of columns/variables:
 	- value: **cost**
 	- definition: Cost of software development
 	
-	- value: **systems*
+	- value: **systems**
 	- definition: System certification and accreditation boundaries
 	
 	- value: **projects**
@@ -188,8 +188,15 @@ Standard list of columns/variables:
          	- **Archival**
 	- `vcs` - A lowercase string with the name of the version control system that is being used for the release. For example, 'git'.
 	- `repositoryURL` - The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."	
+	- `homepageURL` - The URL of the public release homepage.
+	- `downloadURL` - The URL where a distribution of the release can be found.
+	- `disclaimerURL` - The URL where disclaimer language regarding the release can be found.
+	- `disclaimerText` - Short paragraph that includes disclaimer language to accompany the release.
 	- `languages` - An array of strings with the names of the programming languages in use on the release.
 	- `laborHours` - An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors.
+	- `relatedCode` - An array of affiliated government repositories that may be a part of the same project. For example,  relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'.
+	- `reusedCode` - An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release. For example, US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.
+	- `partners` - An array of objects including an acronym for each agency partnering on the release and the contact email at such agency.
 	- `date` - A date object describing the release.
 	
 * Special/specified value/code/symbol: 
